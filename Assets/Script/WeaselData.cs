@@ -6,4 +6,6 @@ using UnityEngine;
 public class WeaselData : ScriptableObject
 {
     public Stat stat;
+
+
 }

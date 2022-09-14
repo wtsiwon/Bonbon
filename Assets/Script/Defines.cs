@@ -10,6 +10,10 @@ public struct Stat
     public float perClickProduct;
 }
 
+public enum EDessert
+{
+
+}
 
 public class Defines : MonoBehaviour
 {
