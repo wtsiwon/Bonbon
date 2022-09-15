@@ -15,6 +15,7 @@ public struct DessertType
     
 }
 
+#region DessertTypes
 public enum EDessertType
 {
     Cake,
@@ -57,8 +58,31 @@ public enum EMacaronType
 
 public enum EShavedIceType
 {
-
+    Injeolmi,
+    RedBean,
+    Mango,
+    Coffee,
+    GreenTea,
 }
+
+public enum EPuddingType
+{
+    Bread,
+    Rice,
+    Almond,
+    BlueBerry,
+    Custard,
+}
+
+public enum EChocolateType
+{
+    Mint,
+    Pave,
+    BongBong,
+    Trouble,
+    Bark,
+}
+#endregion
 
 public class Defines : MonoBehaviour
 {
