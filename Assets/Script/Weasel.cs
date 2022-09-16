@@ -18,13 +18,8 @@ public class Weasel : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        
-    }
+    [Tooltip("기본으로 있는 족제비 인가")]
+    public bool isBasic;
 
-    void Update()
-    {
-        
-    }
+    
 }

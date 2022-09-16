@@ -8,11 +8,16 @@ public struct Stat
 {
     public float perSecondProduct;
     public float perClickProduct;
-}
 
-public struct DessertType
-{
-    
+    public Stat(float perSecondProduct, float perClickProduct)
+    {
+        this.perSecondProduct = perSecondProduct;
+        this.perClickProduct = perClickProduct;
+    }
+    public static Stat operator+ (Stat a, Stat b)
+    {
+        return new Stat(a.perClickProduct + b.perClickProduct, a.perSecondProduct + b.perSecondProduct);
+    }
 }
 
 #region DessertTypes
