@@ -6,6 +6,7 @@ using UnityEngine;
 public class WeaselData : ScriptableObject
 {
     public Stat stat;
+    public EDessertType dessertType;
 }
 
 public class CakeWeaselData : WeaselData
