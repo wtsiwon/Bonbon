@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public int Touch_Coin;
     public int Time_Coin;
 
+    [Header("·¹º§")]
+    public int Boss_Level;
+
     void Start()
     {
         

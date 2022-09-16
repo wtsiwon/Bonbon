@@ -583,7 +583,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 139
+    m_FontSize: 89
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -594,7 +594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Boss Upgrade
+  m_Text: 'Boss Lv : 0'
 --- !u!222 &398006831
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -739,6 +739,7 @@ MonoBehaviour:
   Coin_Text: {fileID: 124096991}
   Touch_Coin_Text: {fileID: 1618158899}
   Time_Coin_Text: {fileID: 198240154}
+  Boss_Level: {fileID: 398006830}
 --- !u!4 &793618343
 Transform:
   m_ObjectHideFlags: 0
@@ -956,6 +957,7 @@ MonoBehaviour:
   Coin: 0
   Touch_Coin: 1
   Time_Coin: 0
+  Boss_Level: 0
 --- !u!4 &1231565097
 Transform:
   m_ObjectHideFlags: 0
