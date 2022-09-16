@@ -9,6 +9,7 @@ public class WeaselData : ScriptableObject
     public Stat buff;
     public EDessertType dessertType;
     public int level;
+    public string name;
 }
 
 //public class CakeWeaselData : WeaselData
@@ -33,7 +34,3 @@ public class WeaselData : ScriptableObject
 //{
 //    public EPuddingType type;
 //}
-
-
-
-

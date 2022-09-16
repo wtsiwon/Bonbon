@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class GameManager : Singleton<GameManager>
+public class ProductManager : Singleton<ProductManager>
 {
     private const float SECOND = 1f;
 
@@ -22,5 +22,6 @@ public class GameManager : Singleton<GameManager>
         SecondProduction();
         yield return StartCoroutine(EPerSecondProduct());
     }
+
 
 }

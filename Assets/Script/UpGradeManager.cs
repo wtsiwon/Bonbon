@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpGradeManager : Singleton<UpGradeManager>
 {
     [Tooltip("업그레이드 창들")]
-    public List<UpGradeStoreBoard> UpGradeboards = new List<UpGradeStoreBoard>();
+    public List<UpGradeStoreBoard> upGradeboards = new List<UpGradeStoreBoard>();
 
+    [Tooltip("업글창을 켜는 버튼들")]
+    public List<Button> btns = new List<Button>();
+
+    [Tooltip("업글창이 켜져 있냐")]
+    public bool isActive;
 
     public EDessertType currentBoardType
     {
@@ -23,10 +29,9 @@ public class UpGradeManager : Singleton<UpGradeManager>
 
     public void ActiveUpGradeBoard(EDessertType dessertType)
     {
-        UpGradeboards[(int)dessertType].gameObject.SetActive(true);
+        upGradeboards[(int)dessertType].gameObject.SetActive(true);
     }
 
-
-
+    
 
 }
