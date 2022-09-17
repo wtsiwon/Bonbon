@@ -3,29 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class UpGradeStoreBoard : MonoBehaviour
+public abstract class UpGradeBoard : MonoBehaviour
 {
     #region Resource
     [SerializeField]
-    [Tooltip("가게 리소스")]
-    protected Sprite storeResource;
-
-    [SerializeField]
-    [Tooltip("족제비 리소스")]
-    protected List<Sprite> weaselResources = new List<Sprite>();
+    [Tooltip("가게 배경")]
+    protected Sprite storeBackGround;
 
     [SerializeField]
     [Tooltip("장비 리소스")]
     protected List<Sprite> equipmentResource = new List<Sprite>();
 
     [SerializeField]
-    [Tooltip("족제비 데이터")]
-    protected List<WeaselData> weaselDatas = new List<WeaselData>();
-
-    [SerializeField]
     [Tooltip("장비 데이터")]
     protected List<EquipmentData> equipmentDatas = new List<EquipmentData>();
-
     #endregion
 
     [SerializeField]
@@ -50,21 +41,55 @@ public abstract class UpGradeStoreBoard : MonoBehaviour
     protected Button exitBtn;
     #endregion
 
-    [Tooltip("샀는가?")]
-    public bool isBought;
+    #region Boards
+    [SerializeField]
+    [Tooltip("가게 업글창")]
+    private StoreUpBoard storeUpBoard;
+
+    [SerializeField]
+    [Tooltip("족제비 업글창")]
+    private GameObject weaselUpBoard;
+
+    [SerializeField]
+    [Tooltip("장비 구매창")]
+    private GameObject equipmentStoreBoard;
+    #endregion
 
     #region GetComponentvalue
-    //protected Animator animator;
+
     #endregion
 
     protected virtual void Start()
     {
+        #region OnClickAddListener
         exitBtn.onClick.AddListener(() =>
         {
             gameObject.SetActive(false);
+            UpGradeManager.Instance.isActive = false;
         });
 
-        //animator = GetComponent<Animator>();
+        storeUpBoardBtn.onClick.AddListener(() =>
+        {
+            storeUpBoard.gameObject.SetActive(true);
+        });
+
+        weaselUpBoardBtn.onClick.AddListener(() =>
+        {
+            weaselUpBoard.gameObject.SetActive(true);
+        });
+
+        equipmentStoreBoardBtn.onClick.AddListener(() =>
+        {
+            equipmentStoreBoard.gameObject.SetActive(true);
+        });
+
+
+        #endregion
+    }
+
+    protected virtual void OnEnable()
+    {
+        SetStore(DessertType);
     }
 
     public EDessertType DessertType

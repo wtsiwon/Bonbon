@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UpGradeManager : Singleton<UpGradeManager>
 {
     [Tooltip("업그레이드 창들")]
-    public List<UpGradeStoreBoard> upGradeboards = new List<UpGradeStoreBoard>();
+    public List<UpGradeBoard> upGradeboards = new List<UpGradeBoard>();
 
     [Tooltip("업글창을 켜는 버튼들")]
     public List<Button> btns = new List<Button>();
@@ -30,8 +30,6 @@ public class UpGradeManager : Singleton<UpGradeManager>
     public void ActiveUpGradeBoard(EDessertType dessertType)
     {
         upGradeboards[(int)dessertType].gameObject.SetActive(true);
+        isActive = true;
     }
-
-    
-
 }
