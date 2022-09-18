@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LeeDaeWoon/Scene/Click.unity
+    path: Assets/LeeDaeWoon/Scene/Test_L.unity
     guid: f557f33e72381d747b91b5f8515fa5a7
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity

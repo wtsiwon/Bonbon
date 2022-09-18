@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UI_Manager : MonoBehaviour
 {
+    [Header("돈 텍스트")]
     public TextMeshProUGUI Coin_Text;
     public TextMeshProUGUI Touch_Coin_Text;
     public TextMeshProUGUI Time_Coin_Text;
+
+    [Header("레벨")]
     public Text Boss_Level;
+
+
 
     void Start()
     {
@@ -38,4 +44,6 @@ public class UI_Manager : MonoBehaviour
             GameManager.Inst.Boss_Level += 1;
         }
     }
+
+
 }
