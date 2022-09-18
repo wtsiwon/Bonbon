@@ -6,32 +6,31 @@ using UnityEngine;
 public class WeaselData : ScriptableObject
 {
     public Stat stat;
+    public Stat buff;
     public EDessertType dessertType;
+    public int level;
+    public string name;
 }
 
-public class CakeWeaselData : WeaselData
-{
-    public ECakeType type;
-}
-public class CookieWeaselData : WeaselData
-{
-    public ECookieType type;
-}
+//public class CakeWeaselData : WeaselData
+//{
+//    public ECakeType type;
+//}
+//public class CookieWeaselData : WeaselData 
+//{ 
+//    public ECookieType type;
+//}
 
-public class MacaronWeaselData : WeaselData
-{
-    public EMacaronType type;
-}
+//public class MacaronWeaselData : WeaselData
+//{
+//    public EMacaronType type;
+//}
 
-public class ShavedIceWeaselData : WeaselData
-{
-    public EShavedIceType type;
-}
-
-public class PuddingWeaselData : WeaselData
-{
-    public EPuddingType type;
-}
-
-
-
+//public class ShavedIceWeaselData : WeaselData
+//{
+//    public EShavedIceType type;
+//}
+//public class PuddingWeaselData : WeaselData
+//{
+//    public EPuddingType type;
+//}
