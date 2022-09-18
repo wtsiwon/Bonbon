@@ -7,4 +7,8 @@ using UnityEngine;
 public class EquipmentData : ScriptableObject
 {
     public Stat stat;
+    [Tooltip("삿음?")]
+    public bool isBought;
+    [Tooltip("구매 완료 Sprite")]
+    public Sprite boughtSprite;
 }

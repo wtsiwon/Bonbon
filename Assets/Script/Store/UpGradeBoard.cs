@@ -10,15 +10,7 @@ public abstract class UpGradeBoard : MonoBehaviour
     [Tooltip("가게 배경")]
     protected Sprite storeBackGround;
 
-    [SerializeField]
-    [Tooltip("장비 리소스")]
-    protected List<Sprite> equipmentResource = new List<Sprite>();
-
-    [SerializeField]
-    [Tooltip("장비 데이터")]
-    protected List<EquipmentData> equipmentDatas = new List<EquipmentData>();
     #endregion
-
     [SerializeField]
     [Tooltip("디저트의 종류")]
     protected EDessertType dessertType;
@@ -48,11 +40,11 @@ public abstract class UpGradeBoard : MonoBehaviour
 
     [SerializeField]
     [Tooltip("족제비 업글창")]
-    private GameObject weaselUpBoard;
+    private WeaselUpBoard weaselUpBoard;
 
     [SerializeField]
     [Tooltip("장비 구매창")]
-    private GameObject equipmentStoreBoard;
+    private EquipmentStoreBoard equipmentStoreBoard;
     #endregion
 
     #region GetComponentvalue
