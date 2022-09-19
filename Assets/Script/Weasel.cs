@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Weasel : MonoBehaviour
 {
+    [SerializeField]
+    [Tooltip("Á·Á¦ºñ Data")]
     private WeaselData data;
 
     public WeaselData Data

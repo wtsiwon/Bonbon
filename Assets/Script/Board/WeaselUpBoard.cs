@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaselUpBoard : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class WeaselUpBoard : MonoBehaviour
     //다른 리소스 추가 예정
     #endregion
 
+    [SerializeField]
+    [Tooltip("족제비 업글창을 켜주는 버튼")]
+    private Button ActiveBtn;
+
     #region 족제비s
     [SerializeField]
     [Tooltip("족제비 들")]
@@ -23,5 +28,18 @@ public class WeaselUpBoard : MonoBehaviour
 
     public Dictionary<EDessertType, List<Sprite>> weasekResourceDic = new Dictionary<EDessertType, List<Sprite>>();
 
+
+    private void Start()
+    {
+        
+    }
+
+    private void AddListners()
+    {
+        ActiveBtn.onClick.AddListener(() =>
+        {
+            
+        });
+    }
 
 }

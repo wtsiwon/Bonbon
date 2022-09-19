@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class EquipmentStoreBoard : MonoBehaviour
 {
+
     [SerializeField]
     [Tooltip("장비 데이터들")]
     private List<EquipmentData> equipmentDatas = new List<EquipmentData>();
@@ -17,6 +18,10 @@ public class EquipmentStoreBoard : MonoBehaviour
     [Tooltip("장비 리소스")]
     private List<Sprite> equipmentResource = new List<Sprite>();
 
+    [SerializeField]
+    [Tooltip("Sprite를 적용할 ImageComponent")]
+    private List<Image> equipmentImage = new List<Image>();
+
     private void OnEnable()
     {
         StartCoroutine(ISetEquipment());
@@ -24,10 +29,15 @@ public class EquipmentStoreBoard : MonoBehaviour
     private IEnumerator ISetEquipment()
     {
         yield return new WaitForSeconds(0.1f);
-        SetEQuipment(UpGradeManager.Instance.currentBoardType);
+        SetEquipment(UpGradeManager.Instance.currentBoardType);
     }
 
-    private void SetEQuipment(EDessertType dessertType)
+    private void SetEquipment(EDessertType dessertType)
+    {
+        
+    }
+
+    private void SetEquipmentBuyBtn()
     {
         for (int i = 0; i < buyBtns.Count; i++)
         {
@@ -37,5 +47,18 @@ public class EquipmentStoreBoard : MonoBehaviour
                 equipmentDatas[a].isBought = true;
             });
         }
+    }
+    
+    private void SetEquipmentImage(EDessertType dessertType)
+    {
+        for (int i = 0; i < equipmentImage.Count; i++)
+        {
+            equipmentImage[i].sprite = equipmentResource[i];
+        }
+    }
+
+    private void SetEquipmentDatas(EDessertType dessertType)
+    {
+
     }
 }

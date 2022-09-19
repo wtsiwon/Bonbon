@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class UpGradeBoard : MonoBehaviour
+public enum EBoardType
+{
+    Store,
+    Weasel,
+    Equipment,
+}
+
+public  class UpGradeBoard : MonoBehaviour
 {
     #region Resource
     [SerializeField]
@@ -16,7 +23,9 @@ public abstract class UpGradeBoard : MonoBehaviour
     protected EDessertType dessertType;
 
     #region UI
+    [Header("Buttons")]
     [SerializeField]
+    [Space(20f)]
     [Tooltip("가게 업글창 버튼")]
     protected Button storeUpBoardBtn;
 
@@ -34,7 +43,9 @@ public abstract class UpGradeBoard : MonoBehaviour
     #endregion
 
     #region Boards
+    [Header("Boards")]
     [SerializeField]
+    [Space(20f)]
     [Tooltip("가게 업글창")]
     private StoreUpBoard storeUpBoard;
 
@@ -54,25 +65,25 @@ public abstract class UpGradeBoard : MonoBehaviour
     protected virtual void Start()
     {
         #region OnClickAddListener
-        exitBtn.onClick.AddListener(() =>
-        {
-            gameObject.SetActive(false);
-            UpGradeManager.Instance.isActive = false;
-        });
+        //exitBtn.onClick.AddListener(() =>
+        //{
+        //    gameObject.SetActive(false);
+        //    UpGradeManager.Instance.isActive = false;
+        //});
 
         storeUpBoardBtn.onClick.AddListener(() =>
         {
-            storeUpBoard.gameObject.SetActive(true);
+            SetActiveBoard(EBoardType.Store);
         });
 
         weaselUpBoardBtn.onClick.AddListener(() =>
         {
-            weaselUpBoard.gameObject.SetActive(true);
+            SetActiveBoard(EBoardType.Weasel);
         });
 
         equipmentStoreBoardBtn.onClick.AddListener(() =>
         {
-            equipmentStoreBoard.gameObject.SetActive(true);
+            SetActiveBoard(EBoardType.Equipment);
         });
 
 
@@ -82,6 +93,35 @@ public abstract class UpGradeBoard : MonoBehaviour
     protected virtual void OnEnable()
     {
         SetStore(DessertType);
+    }
+
+    /// <summary>
+    /// Type에 따라 보드 껏다 켯다 해주는 함수
+    /// </summary>
+    /// <param name="type"></param>
+    private void SetActiveBoard(EBoardType type)
+    {
+        switch (type)
+        {
+            case EBoardType.Store:
+                storeUpBoard.gameObject.SetActive(true);
+                weaselUpBoard.gameObject.SetActive(false);
+                equipmentStoreBoard.gameObject.SetActive(false);
+                break;
+            case EBoardType.Weasel:
+                storeUpBoard.gameObject.SetActive(false);
+                weaselUpBoard.gameObject.SetActive(true);
+                equipmentStoreBoard.gameObject.SetActive(false);
+                break;
+            case EBoardType.Equipment:
+                storeUpBoard.gameObject.SetActive(false);
+                weaselUpBoard.gameObject.SetActive(false);
+                equipmentStoreBoard.gameObject.SetActive(true);
+                break;
+            default:
+                Debug.Assert(false);
+                break;
+        }
     }
 
     public EDessertType DessertType
@@ -97,7 +137,7 @@ public abstract class UpGradeBoard : MonoBehaviour
         }
     }
 
-    //가게 리소스, 족제비, 장비, 디저트 리소스,
+    //가게 리소스, 족제비, 장비, 디저트 리소스, 가게 Data
     private void SetStore(EDessertType dessertType)
     {
         
