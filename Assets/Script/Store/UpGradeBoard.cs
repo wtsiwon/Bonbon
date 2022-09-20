@@ -14,10 +14,14 @@ public  class UpGradeBoard : MonoBehaviour
 {
     #region Resource
     [SerializeField]
-    [Tooltip("가게 배경")]
+    [Tooltip("가게 배경Sprite")]
     protected Sprite storeBackGround;
 
     #endregion
+    [SerializeField]
+    [Tooltip("가게 배경 Sprite를 적용할 Image")]
+    private Image storeBackGroundImg;
+
     [SerializeField]
     [Tooltip("디저트의 종류")]
     protected EDessertType dessertType;
