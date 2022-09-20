@@ -2,14 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "WeaselData", menuName = "WeaselDatas", order = int.MinValue)]
+[CreateAssetMenu(fileName = "WeaselData", menuName = "Datas/WeaselData", order = 2)]
 public class WeaselData : ScriptableObject
 {
+    [Header("Stat")]
+    [Tooltip("스탯")]
     public Stat stat;
+    [Tooltip("추가 버프스탯")]
     public Stat buff;
+    [Tooltip("레벨업시 증가 스탯")]
+    public Stat statIncrement;
+
+    [Space(20f)]
+    [Tooltip("Type")]
     public EDessertType dessertType;
+    [Tooltip("level")]
     public int level;
+    [Tooltip("이름")]
     public string name;
+    [Tooltip("족제비 Image")]
+    public Sprite weaselImage;
 }
 
 //public class CakeWeaselData : WeaselData

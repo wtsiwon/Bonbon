@@ -23,6 +23,7 @@ public struct Stat
 #region DessertTypes
 public enum EDessertType
 {
+    None,//아무것도 안켜졋을 때
     Cake,
     Cookie,
     Macaron,

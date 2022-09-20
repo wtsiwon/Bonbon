@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "StoreData", menuName = "Datas", order = int.MinValue)]
+[CreateAssetMenu(fileName = "StoreData", menuName = "Datas/StoreData", order = 1)]
 public class StoreData : ScriptableObject
 {
     [Tooltip("Ω∫≈»")]

@@ -10,6 +10,7 @@ public class StoreUpBoard : MonoBehaviour
     [Tooltip("가게 리소스")]
     private List<Sprite> storeResource = new List<Sprite>();
 
+    
     #region UIs
     [SerializeField]
     [Tooltip("가게 업그레이드 버튼")]
@@ -31,8 +32,29 @@ public class StoreUpBoard : MonoBehaviour
     [Tooltip("스탯 증가량txt")]
     private TextMeshProUGUI statIncrementTxt;
 
-    
+
     #endregion
+
+    [SerializeField]
+    private StoreData data;
+    
+    public StoreData Data
+    {
+        get
+        {
+            return data;
+        }
+        set
+        {
+            data = value;
+            if(data == null)
+            {
+                
+            }
+
+        }
+    }
+
     private int level;
     public int Level
     {
