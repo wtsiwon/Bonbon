@@ -29,15 +29,15 @@ public class Map_Move : MonoBehaviour
         switch (location)
         {
             case Location.Left:
-                All_BackGround.transform.DOLocalMoveX(1440, 1).SetEase(Ease.Linear);
+                All_BackGround.transform.DOLocalMoveX(1440, 0.2f).SetEase(Ease.Linear);
                 break;
 
             case Location.Among:
-                All_BackGround.transform.DOLocalMoveX(0, 1).SetEase(Ease.Linear);
+                All_BackGround.transform.DOLocalMoveX(0, 0.2f).SetEase(Ease.Linear);
                 break;
 
             case Location.Right:
-                All_BackGround.transform.DOLocalMoveX(-1440, 1).SetEase(Ease.Linear);
+                All_BackGround.transform.DOLocalMoveX(-1440, 0.2f).SetEase(Ease.Linear);
                 break;
         }
 
