@@ -88,6 +88,13 @@ public enum EChocolateType
     Trouble,
     Bark,
 }
+
+public enum EBoardType
+{
+    Store,
+    Weasel,
+    Equipment,
+}
 #endregion
 
 public class Defines : MonoBehaviour

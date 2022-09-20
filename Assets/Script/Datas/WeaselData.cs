@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "WeaselData", menuName = "Datas/WeaselData", order = 2)]
-public class WeaselData : ScriptableObject
+public class WeaselData : BaseData
 {
     [Header("Stat")]
     [Tooltip("Ω∫≈»")]

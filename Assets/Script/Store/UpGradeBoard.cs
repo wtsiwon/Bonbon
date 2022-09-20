@@ -3,24 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum EBoardType
-{
-    Store,
-    Weasel,
-    Equipment,
-}
+
 
 public  class UpGradeBoard : MonoBehaviour
 {
     #region Resource
-    [SerializeField]
-    [Tooltip("가게 배경Sprite")]
-    protected Sprite storeBackGround;
+    //[SerializeField]
+    //[Tooltip("가게 배경Sprite")]
+    //protected Sprite storeBackGround;
 
+    //[SerializeField]
+    //[Tooltip("가게 배경 Sprite를 적용할 Image")]
+    //private Image storeBackGroundImg;
     #endregion
-    [SerializeField]
-    [Tooltip("가게 배경 Sprite를 적용할 Image")]
-    private Image storeBackGroundImg;
 
     [SerializeField]
     [Tooltip("디저트의 종류")]
@@ -69,11 +64,11 @@ public  class UpGradeBoard : MonoBehaviour
     protected virtual void Start()
     {
         #region OnClickAddListener
-        //exitBtn.onClick.AddListener(() =>
-        //{
-        //    gameObject.SetActive(false);
-        //    UpGradeManager.Instance.isActive = false;
-        //});
+        exitBtn.onClick.AddListener(() =>
+        {
+            gameObject.SetActive(false);
+            UpGradeManager.Instance.isActive = false;
+        });
 
         storeUpBoardBtn.onClick.AddListener(() =>
         {
@@ -89,8 +84,6 @@ public  class UpGradeBoard : MonoBehaviour
         {
             SetActiveBoard(EBoardType.Equipment);
         });
-
-
         #endregion
     }
 

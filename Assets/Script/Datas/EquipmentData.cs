@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "EquipmentData", menuName = "Datas/EquipmentData", order = 0)]
-public class EquipmentData : ScriptableObject
+public class EquipmentData : BaseData
 {
     [Tooltip("올라가는 Stat")]
     public Stat stat;

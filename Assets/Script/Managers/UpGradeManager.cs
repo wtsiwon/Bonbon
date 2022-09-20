@@ -16,17 +16,31 @@ public class UpGradeManager : Singleton<UpGradeManager>
 
     #region Datas
     [Tooltip("가게 Datas")]
-    public List<StoreData> storeDatas = new List<StoreData>();
+    public List<BaseData> storeDatas = new List<BaseData>();
 
     [Tooltip("족제비 Datas")]
-    public List<WeaselData> weaselDatas = new List<WeaselData>();
+    public List<BaseData> weaselDatas = new List<BaseData>();
 
     [Tooltip("장비 Datas")]
-    public List<EquipmentData> equipmentDatas = new List<EquipmentData>();
+    public List<BaseData> equipmentDatas = new List<BaseData>();
 
-    //public Dictionary<EDessertType, List<T>>
+    public Dictionary<EBoardType, List<BaseData>> datas = new Dictionary<EBoardType, List<BaseData>>();
+
     //Datas를 Dictionary로 관리
     #endregion
+
+    private void Start()
+    {
+        ActiveUpGradeBoard();
+        SetDictionaryDatas();
+    }
+
+    private void SetDictionaryDatas()
+    {
+        datas.Add(EBoardType.Store, storeDatas);
+        datas.Add(EBoardType.Weasel, weaselDatas);
+        datas.Add(EBoardType.Equipment, equipmentDatas);
+    }
 
     public EDessertType currentBoardType
     {
@@ -41,9 +55,18 @@ public class UpGradeManager : Singleton<UpGradeManager>
         }
     }
 
+
     public void ActiveUpGradeBoard()
     {
-        upGradeboard.gameObject.SetActive(true);
-        isActive = true;
+        for (int i = 0; i < btns.Count; i++)
+        {
+            int a = i;
+            btns[a].onClick.AddListener(() =>
+            {
+                upGradeboard.gameObject.SetActive(true);
+                isActive = true;
+            });
+        }
+
     }
 }

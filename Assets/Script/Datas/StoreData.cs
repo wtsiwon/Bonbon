@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "StoreData", menuName = "Datas/StoreData", order = 1)]
-public class StoreData : ScriptableObject
+public class StoreData : BaseData
 {
     [Tooltip("Ω∫≈»")]
     public Stat stat;
