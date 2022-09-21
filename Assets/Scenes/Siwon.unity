@@ -1313,6 +1313,14 @@ PrefabInstance:
       propertyPath: equipmentStoreBoard
       value: 
       objectReference: {fileID: 1522865750}
+    - target: {fileID: 7875766352294448171, guid: cca3ed45992a8e1408d952ed703c3d21, type: 3}
+      propertyPath: Weasel_Management.Array.data[0]
+      value: 
+      objectReference: {fileID: 7219448307087824259, guid: accc1d78169b6ed4ca56b01ca5bc7702, type: 3}
+    - target: {fileID: 7875766352294448171, guid: cca3ed45992a8e1408d952ed703c3d21, type: 3}
+      propertyPath: Weasel_Management.Array.data[1]
+      value: 
+      objectReference: {fileID: 2044912990958125862, guid: bed279086ec177b4daeeab10a8287ee4, type: 3}
     - target: {fileID: 8435258393136245233, guid: cca3ed45992a8e1408d952ed703c3d21, type: 3}
       propertyPath: m_IsActive
       value: 0
