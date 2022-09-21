@@ -18,8 +18,12 @@ public class WeaselData : BaseData
     public EDessertType dessertType;
     [Tooltip("level")]
     public int level;
+    [Tooltip("Cost")]
+    public float cost;
     [Tooltip("이름")]
     public string name;
+    [Tooltip("삿는가")]
+    public bool isBought;
     [Tooltip("족제비 Image")]
     public Sprite weaselImage;
 }

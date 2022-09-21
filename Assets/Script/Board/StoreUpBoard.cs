@@ -6,11 +6,6 @@ using TMPro;
 
 public class StoreUpBoard : MonoBehaviour
 {
-    [SerializeField]
-    [Tooltip("가게 리소스")]
-    private List<Sprite> storeResource = new List<Sprite>();
-
-
     #region UIs
     [SerializeField]
     [Tooltip("가게 업그레이드 버튼")]
@@ -20,9 +15,6 @@ public class StoreUpBoard : MonoBehaviour
     [Tooltip("Sprite가 들어갈 Image")]
     private Image boardImg;
 
-    [SerializeField]
-    [Tooltip("메인(클릭)화면에 있는 가게 Image")]
-    private Image clickAreaImg;
 
     [SerializeField]
     [Tooltip("업그레이드 비용text")]
@@ -30,10 +22,19 @@ public class StoreUpBoard : MonoBehaviour
 
     [SerializeField]
     [Tooltip("스탯 증가량txt")]
-    private TextMeshProUGUI statIncrementTxt;
+    private TextMeshProUGUI statIncrementPerSecondTxt;
+    [SerializeField]
+    private TextMeshProUGUI statIncrementPerClickTxt;
 
-
+    [SerializeField]
+    [Tooltip("레벨txt")]
+    private TextMeshProUGUI levelTxt;
     #endregion
+
+    private void Start()
+    {
+        SetStoreBoard();
+    }
 
     [SerializeField]
     private StoreData data;
@@ -49,9 +50,9 @@ public class StoreUpBoard : MonoBehaviour
             data = value;
             if (data == null)
             {
-
+                data = (StoreData)UpGradeManager.Instance.datas[EBoardType.Store]
+                    [(int)UpGradeManager.Instance.currentBoardType];
             }
-
         }
     }
 
@@ -65,16 +66,30 @@ public class StoreUpBoard : MonoBehaviour
         set
         {
             level = value;
+
             //level이 10의 배수이면 index에 있는대로 바꿔줌
             if (level % 10 == 0)
             {
                 //storeResource에 Resource가 있는지 확인
-                if (storeResource[level / 10] != null)
+                if (data.storeResource[level / 10] != null)
                 {
-                    boardImg.sprite = storeResource[level / 10];
-                    clickAreaImg.sprite = storeResource[level / 10];
+                    boardImg.sprite = data.storeResource[level / 10];
                 }
             }
         }
+    }
+    private void Update()
+    {
+        #region Texts
+        levelTxt.text = $"{data.level}Lv";
+        upGradeCostTxt.text = $"{data.cost}원";
+        statIncrementPerSecondTxt.text = $"{data.statIncrement.perSecondProduct}원";
+        statIncrementPerClickTxt.text = $"{data.statIncrement.perClickProduct}원";
+        #endregion
+    }
+
+    private void SetStoreBoard()
+    {
+        
     }
 }

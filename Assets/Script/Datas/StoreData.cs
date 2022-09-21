@@ -9,11 +9,11 @@ public class StoreData : BaseData
     [Tooltip("스탯")]
     public Stat stat;
     [Tooltip("StoreSprite")]
-    public Sprite sprite;
+    public List<Sprite> storeResource = new List<Sprite>();
     [Tooltip("업그레이드 비용")]
     public float cost;
     [Tooltip("업글시 스탯 증가량")]
-    public float statIncrement;
+    public Stat statIncrement;
     [Tooltip("레벨")]
     public float level;
     [Tooltip("현재 스탯")]

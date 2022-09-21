@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 
-public  class UpGradeBoard : MonoBehaviour
+public class UpGradeBoard : MonoBehaviour
 {
     #region Resource
     //[SerializeField]
@@ -90,7 +90,7 @@ public  class UpGradeBoard : MonoBehaviour
 
     protected virtual void OnEnable()
     {
-        SetStore(DessertType);
+        Set(DessertType);
     }
 
     /// <summary>
@@ -135,9 +135,9 @@ public  class UpGradeBoard : MonoBehaviour
     }
 
     //가게 리소스, 족제비, 장비, 디저트 리소스, 가게 Data
-    private void SetStore(EDessertType dessertType)
+    private void Set(EDessertType dessertType)
     {
-        
+        SetActiveBoard(EBoardType.Store);
     }
 
 }
