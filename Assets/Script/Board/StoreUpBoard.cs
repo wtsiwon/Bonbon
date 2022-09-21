@@ -51,7 +51,7 @@ public class StoreUpBoard : MonoBehaviour
             if (data == null)
             {
                 data = (StoreData)UpGradeManager.Instance.datas[EBoardType.Store]
-                    [(int)UpGradeManager.Instance.currentBoardType];
+                    [(int)UpGradeManager.Instance.CurrentBoardType];
             }
         }
     }
@@ -90,6 +90,7 @@ public class StoreUpBoard : MonoBehaviour
 
     private void SetStoreBoard()
     {
-        
+        data = (StoreData)UpGradeManager.Instance.datas[EBoardType.Store]
+            [(int)UpGradeManager.Instance.CurrentBoardType];
     }
 }

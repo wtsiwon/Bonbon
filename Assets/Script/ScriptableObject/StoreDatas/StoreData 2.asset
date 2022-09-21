@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330cada5cb2e5714c9c06148dee0a60b, type: 3}
   m_Name: StoreData 2
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  storeResource:
+  - {fileID: 21300000, guid: a8baafd3da7f5664581a1bc620ff7a6b, type: 3}
   cost: 0
-  statIncrement: 0
   level: 0
   currentStat: 0
   name: 

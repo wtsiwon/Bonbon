@@ -45,7 +45,8 @@ public class UpGradeManager : Singleton<UpGradeManager>
         datas.Add(EBoardType.Equipment, equipmentDatas);
     }
 
-    public EDessertType currentBoardType
+    private EDessertType currentBoardType;
+    public EDessertType CurrentBoardType
     {
         get
         {

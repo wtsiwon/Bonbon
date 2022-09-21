@@ -29,7 +29,7 @@ public class EquipmentStoreBoard : MonoBehaviour
     private IEnumerator ISetEquipment()
     {
         yield return new WaitForSeconds(0.1f);
-        SetEquipment(UpGradeManager.Instance.currentBoardType);
+        SetEquipment(UpGradeManager.Instance.CurrentBoardType);
     }
 
     private void SetEquipment(EDessertType dessertType)
