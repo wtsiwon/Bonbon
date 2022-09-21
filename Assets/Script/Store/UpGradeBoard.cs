@@ -58,7 +58,7 @@ public  class UpGradeBoard : MonoBehaviour
     #endregion
 
     #region GetComponentvalue
-
+    private Animator animator;
     #endregion
 
     protected virtual void Start()
@@ -85,6 +85,7 @@ public  class UpGradeBoard : MonoBehaviour
             SetActiveBoard(EBoardType.Equipment);
         });
         #endregion
+        animator = GetComponent<Animator>();
     }
 
     protected virtual void OnEnable()
@@ -130,7 +131,6 @@ public  class UpGradeBoard : MonoBehaviour
         set
         {
             dessertType = value;
-
         }
     }
 

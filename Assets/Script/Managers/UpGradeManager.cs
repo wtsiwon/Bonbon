@@ -24,6 +24,7 @@ public class UpGradeManager : Singleton<UpGradeManager>
     [Tooltip("장비 Datas")]
     public List<BaseData> equipmentDatas = new List<BaseData>();
 
+    [Tooltip("Type으로 data를 분류해 저장")]
     public Dictionary<EBoardType, List<BaseData>> datas = new Dictionary<EBoardType, List<BaseData>>();
 
     //Datas를 Dictionary로 관리
@@ -34,7 +35,9 @@ public class UpGradeManager : Singleton<UpGradeManager>
         ActiveUpGradeBoard();
         SetDictionaryDatas();
     }
-
+    /// <summary>
+    /// dictionary에 data추가 하는 함수
+    /// </summary>
     private void SetDictionaryDatas()
     {
         datas.Add(EBoardType.Store, storeDatas);

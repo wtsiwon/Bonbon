@@ -6173,7 +6173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8435258394413626989}
   - component: {fileID: -6206700037120006760}
-  - component: {fileID: 7875766352294448171}
+  - component: {fileID: 6273730682865006462}
   m_Layer: 5
   m_Name: UpGradeBoard
   m_TagString: Untagged
@@ -6226,21 +6226,25 @@ MonoBehaviour:
   storeUpBoard: {fileID: 0}
   weaselUpBoard: {fileID: 0}
   equipmentStoreBoard: {fileID: 0}
---- !u!114 &7875766352294448171
-MonoBehaviour:
+--- !u!95 &6273730682865006462
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8435258394413626988}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 735cf18a68c5e424f9198a1942215b1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weasel_Management:
-  - {fileID: 0}
-  - {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 36de3b4106b5053468fbcca23bb661dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8435258394453788076
 GameObject:
   m_ObjectHideFlags: 0

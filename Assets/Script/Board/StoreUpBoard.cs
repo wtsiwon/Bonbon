@@ -10,7 +10,7 @@ public class StoreUpBoard : MonoBehaviour
     [Tooltip("가게 리소스")]
     private List<Sprite> storeResource = new List<Sprite>();
 
-    
+
     #region UIs
     [SerializeField]
     [Tooltip("가게 업그레이드 버튼")]
@@ -37,7 +37,7 @@ public class StoreUpBoard : MonoBehaviour
 
     [SerializeField]
     private StoreData data;
-    
+
     public StoreData Data
     {
         get
@@ -47,9 +47,9 @@ public class StoreUpBoard : MonoBehaviour
         set
         {
             data = value;
-            if(data == null)
+            if (data == null)
             {
-                
+
             }
 
         }
@@ -68,12 +68,13 @@ public class StoreUpBoard : MonoBehaviour
             //level이 10의 배수이면 index에 있는대로 바꿔줌
             if (level % 10 == 0)
             {
-                boardImg.sprite = storeResource[level / 10];
-                clickAreaImg.sprite = storeResource[level / 10];
+                //storeResource에 Resource가 있는지 확인
+                if (storeResource[level / 10] != null)
+                {
+                    boardImg.sprite = storeResource[level / 10];
+                    clickAreaImg.sprite = storeResource[level / 10];
+                }
             }
         }
     }
-
-
-
 }
