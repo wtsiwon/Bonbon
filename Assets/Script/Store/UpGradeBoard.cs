@@ -90,9 +90,14 @@ public class UpGradeBoard : MonoBehaviour
 
     protected virtual void OnEnable()
     {
-        Set(DessertType);
+        StartCoroutine(Wait());
     }
 
+    private IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(0.05f);
+        Set(DessertType);
+    }
     /// <summary>
     /// Type에 따라 보드 껏다 켯다 해주는 함수
     /// </summary>
@@ -138,6 +143,9 @@ public class UpGradeBoard : MonoBehaviour
     private void Set(EDessertType dessertType)
     {
         SetActiveBoard(EBoardType.Store);
+
     }
+
+    
 
 }

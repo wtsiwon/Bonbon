@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dessertType: 0
   level: 0
+  cost: 0
   name: 
-  weaselImage: {fileID: 0}
+  isBought: 0
+  weaselImage: {fileID: 21300000, guid: dfeaa9a5bc031fd4a8407755716b3a22, type: 3}

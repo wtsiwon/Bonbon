@@ -42,16 +42,16 @@ public class Weasel : MonoBehaviour
     private void OnEnable()
     {
         //족제비 아이콘설정
-        weaselIcon.sprite = data.weaselImage;
+        //weaselIcon.sprite = data.weaselImage;
+        //weaselName.text = $"{data.name}";
     }
 
     private void Update()
     {
         #region Texts
-        costTxt.text = $"{data.cost}";
-        levelTxt.text = $"{data.level}";
-        perSecondIncrementTxt.text = $"{data.statIncrement.perSecondProduct}";
-        weaselName.text = $"{data.name}";
+        //costTxt.text = $"{data.cost}";
+        //levelTxt.text = $"{data.level}";
+        //perSecondIncrementTxt.text = $"{data.statIncrement.perSecondProduct}";
         #endregion
     }
 

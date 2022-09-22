@@ -17,4 +17,6 @@ MonoBehaviour:
   cost: 0
   level: 0
   currentStat: 0
-  name: 
+  isBought: 0
+  name: "1\uBC88 \uC871\uC81C\uBE44"
+  weaselBack: {fileID: 6782912116665629824, guid: accc1d78169b6ed4ca56b01ca5bc7702, type: 3}

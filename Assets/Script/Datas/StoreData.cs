@@ -22,4 +22,6 @@ public class StoreData : BaseData
     public bool isBought;
     [Tooltip("이름")]
     public string name;
+    [Tooltip("족제비 애니메이션")]
+    public GameObject weaselBack;
 }

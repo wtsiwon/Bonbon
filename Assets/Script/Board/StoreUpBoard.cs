@@ -27,15 +27,31 @@ public class StoreUpBoard : MonoBehaviour
     private TextMeshProUGUI statIncrementPerClickTxt;
 
     [SerializeField]
+    [Tooltip("이름")]
+    private TextMeshProUGUI name;
+
+    [SerializeField]
     [Tooltip("레벨txt")]
     private TextMeshProUGUI levelTxt;
     #endregion
 
+    private Vector3 animPos = new Vector3(20, 20, 0);
     private void Start()
     {
-        SetStoreBoard();
     }
 
+    private void OnEnable()
+    {
+        //SetStoreBoard();
+        //StartCoroutine(Wait());
+    }
+
+    private IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(0.05f);
+        
+        Instantiate(data.weaselBack, animPos, Quaternion.identity);
+    }
     [SerializeField]
     private StoreData data;
 
@@ -81,10 +97,10 @@ public class StoreUpBoard : MonoBehaviour
     private void Update()
     {
         #region Texts
-        levelTxt.text = $"{data.level}Lv";
-        upGradeCostTxt.text = $"{data.cost}원";
-        statIncrementPerSecondTxt.text = $"+{data.statIncrement.perSecondProduct}/s";
-        statIncrementPerClickTxt.text = $"+{data.statIncrement.perClickProduct}/c";
+        //levelTxt.text = $"{data.level}Lv";
+        //upGradeCostTxt.text = $"{data.cost}원";
+        //statIncrementPerSecondTxt.text = $"+{data.statIncrement.perSecondProduct}/s";
+        //statIncrementPerClickTxt.text = $"+{data.statIncrement.perClickProduct}/c";
         #endregion
     }
 

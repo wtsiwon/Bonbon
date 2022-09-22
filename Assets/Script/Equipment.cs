@@ -12,12 +12,21 @@ public class Equipment : MonoBehaviour
     public Button buyBtn;
 
     [SerializeField]
-    [Tooltip("스탯 증가량")]
-    private TextMeshProUGUI incrementTxt;
+    [Tooltip("클릭스탯 증가량")]
+    private TextMeshProUGUI incrementClickTxt;
+
+
+    [SerializeField]
+    [Tooltip("초당스탯 증가량")]
+    private TextMeshProUGUI incrementSecondTxt;
 
     [SerializeField]
     [Tooltip("가격")]
     private TextMeshProUGUI costTxt;
+
+    [SerializeField]
+    [Tooltip("이름")]
+    private TextMeshProUGUI name;
 
     [SerializeField]
     [Tooltip("Sprite를 적용할 ImageComponent")]
@@ -35,7 +44,7 @@ public class Equipment : MonoBehaviour
         set
         {
             data = value;
-            if(data.isBought == true)
+            if (data.isBought == true)
             {
                 isBought = true;
             }
@@ -52,7 +61,7 @@ public class Equipment : MonoBehaviour
         set
         {
             isBought = value;
-            if(isBought == true)
+            if (isBought == true)
             {
 
             }
@@ -60,6 +69,24 @@ public class Equipment : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        #region Texts
+        //costTxt.text = $"{data.cost}원";
+        #endregion
+    }
+
+    private void OnEnable()
+    {
+        //Data = (EquipmentData)UpGradeManager.Instance.datas[EBoardType.Equipment]
+        //    [(int)UpGradeManager.Instance.CurrentBoardType];
+        //#region Texts
+        //name.text = $"{data.name}";
+        //incrementClickTxt.text = $"{data.stat.perClickProduct}/c";
+        //incrementSecondTxt.text = $"{data.stat.perSecondProduct}/s";
+        //equipmentIcon.sprite = data.equipmentSprite;
+        //#endregion
+    }
     private void Start()
     {
         #region AddListeners
