@@ -6,14 +6,10 @@ using TMPro;
 
 public class Weasel : MonoBehaviour
 {
-
     #region UIs
     [SerializeField]
     [Tooltip("족제비 이미지넣을 Component")]
     private Image weaselIcon;
-
-    [Tooltip("고용 Button")]//hire: 고용하다
-    public Button hireBtn;
 
     [Tooltip("UpgradeButton")]
     public Button upGradeBtn;
@@ -35,13 +31,9 @@ public class Weasel : MonoBehaviour
     private TextMeshProUGUI weaselName;
     #endregion
 
-
-
-
     [SerializeField]
     [Tooltip("족제비 Data")]
     private WeaselData data;
-
     public WeaselData Data
     {
         get { return data; }
@@ -64,11 +56,11 @@ public class Weasel : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// 족제비 Set
     /// </summary>
     private void SetWeasel()
     {
-        hireBtn.onClick.AddListener(() =>
+        upGradeBtn.onClick.AddListener(() =>
         {
             if (GameManager.Inst.Coin >= data.cost)
             {

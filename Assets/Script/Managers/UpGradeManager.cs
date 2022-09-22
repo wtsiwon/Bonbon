@@ -30,11 +30,27 @@ public class UpGradeManager : Singleton<UpGradeManager>
     //Datas를 Dictionary로 관리
     #endregion
 
+    public List<BaseData> allDatas = new List<BaseData>();
+
     private void Start()
     {
         ActiveUpGradeBoard();
         SetDictionaryDatas();
     }
+    private void AddClickProduct()
+    {
+        for (int i = 0; i < allDatas.Count; i++)
+        {
+
+            
+        }
+    }
+
+    private void AddSecondProduct()
+    {
+
+    }
+
     /// <summary>
     /// dictionary에 data추가 하는 함수
     /// </summary>

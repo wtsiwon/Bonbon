@@ -18,6 +18,8 @@ public class StoreData : BaseData
     public float level;
     [Tooltip("ÇöÀç ½ºÅÈ")]
     public float currentStat;
+    [Tooltip("»ñ³Ä")]
+    public bool isBought;
     [Tooltip("ÀÌ¸§")]
     public string name;
 }

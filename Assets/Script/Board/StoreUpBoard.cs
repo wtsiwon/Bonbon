@@ -83,8 +83,8 @@ public class StoreUpBoard : MonoBehaviour
         #region Texts
         levelTxt.text = $"{data.level}Lv";
         upGradeCostTxt.text = $"{data.cost}¿ø";
-        statIncrementPerSecondTxt.text = $"{data.statIncrement.perSecondProduct}¿ø";
-        statIncrementPerClickTxt.text = $"{data.statIncrement.perClickProduct}¿ø";
+        statIncrementPerSecondTxt.text = $"+{data.statIncrement.perSecondProduct}/s";
+        statIncrementPerClickTxt.text = $"+{data.statIncrement.perClickProduct}/c";
         #endregion
     }
 

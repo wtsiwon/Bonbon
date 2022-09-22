@@ -8,24 +8,20 @@ public class Equipment : MonoBehaviour
 {
     #region UI
     [SerializeField]
-    [Tooltip("장비 Image")]
-    private Image equipmentImg;
+    [Tooltip("장비 사는 버튼")]
+    public Button buyBtn;
 
     [SerializeField]
-    [Tooltip("장비 데이터들")]
-    private List<EquipmentData> equipmentDatas = new List<EquipmentData>();
+    [Tooltip("스탯 증가량")]
+    private TextMeshProUGUI incrementTxt;
 
     [SerializeField]
-    [Tooltip("장비 사는 버튼들")]
-    public List<Button> buyBtns = new List<Button>();
-
-    [SerializeField]
-    [Tooltip("장비 리소스")]
-    private List<Sprite> equipmentResource = new List<Sprite>();
+    [Tooltip("가격")]
+    private TextMeshProUGUI costTxt;
 
     [SerializeField]
     [Tooltip("Sprite를 적용할 ImageComponent")]
-    private List<Image> equipmentImage = new List<Image>();
+    private Image equipmentIcon;
     #endregion
 
     [SerializeField]
@@ -39,7 +35,39 @@ public class Equipment : MonoBehaviour
         set
         {
             data = value;
+            if(data.isBought == true)
+            {
+                isBought = true;
+            }
         }
+    }
+
+    private bool isBought;
+    public bool IsBought
+    {
+        get
+        {
+            return isBought;
+        }
+        set
+        {
+            isBought = value;
+            if(isBought == true)
+            {
+
+            }
+
+        }
+    }
+
+    private void Start()
+    {
+        #region AddListeners
+        buyBtn.onClick.AddListener(() =>
+        {
+            data.isBought = true;
+        });
+        #endregion
     }
 
 }
