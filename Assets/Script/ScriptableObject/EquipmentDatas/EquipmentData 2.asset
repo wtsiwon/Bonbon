@@ -16,4 +16,4 @@ MonoBehaviour:
   boughtSprite: {fileID: 0}
   equipmentSprite: {fileID: 0}
   cost: 0
-  name: 
+  name: "\uC624\uBE102"

@@ -72,20 +72,23 @@ public class Equipment : MonoBehaviour
     private void Update()
     {
         #region Texts
-        //costTxt.text = $"{data.cost}¿ø";
         #endregion
     }
 
     private void OnEnable()
     {
-        //Data = (EquipmentData)UpGradeManager.Instance.datas[EBoardType.Equipment]
-        //    [(int)UpGradeManager.Instance.CurrentBoardType];
-        //#region Texts
-        //name.text = $"{data.name}";
-        //incrementClickTxt.text = $"{data.stat.perClickProduct}/c";
-        //incrementSecondTxt.text = $"{data.stat.perSecondProduct}/s";
-        //equipmentIcon.sprite = data.equipmentSprite;
-        //#endregion
+        Data = (EquipmentData)UpGradeManager.Instance.datas[EBoardType.Equipment]
+        [(int)UpGradeManager.Instance.CurrentBoardType];
+        Texts();
+    }
+
+    private void Texts()
+    {
+        name.text = $"{data.name}";
+        costTxt.text = $"{data.cost}¿ø";
+        incrementClickTxt.text = $"{data.stat.perClickProduct}/c";
+        incrementSecondTxt.text = $"{data.stat.perSecondProduct}/s";
+        equipmentIcon.sprite = data.equipmentSprite;
     }
     private void Start()
     {

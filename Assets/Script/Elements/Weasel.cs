@@ -39,6 +39,11 @@ public class Weasel : MonoBehaviour
         get { return data; }
         set { data = value; }
     }
+
+    private void Start()
+    {
+        SetWeasel();
+    }
     private void OnEnable()
     {
         //족제비 아이콘설정
@@ -48,11 +53,14 @@ public class Weasel : MonoBehaviour
 
     private void Update()
     {
-        #region Texts
+        Texts();
+    }
+
+    private void Texts()
+    {
         //costTxt.text = $"{data.cost}";
         //levelTxt.text = $"{data.level}";
         //perSecondIncrementTxt.text = $"{data.statIncrement.perSecondProduct}";
-        #endregion
     }
 
     /// <summary>
@@ -64,8 +72,10 @@ public class Weasel : MonoBehaviour
         {
             if (GameManager.Inst.Coin >= data.cost)
             {
+                data.level += 1;
+                GameManager.Inst.Coin -= data.cost;
                 data.isBought = true;
-                //GameManager.Inst.Coin -= data.cost;
+
             }
         });
     }

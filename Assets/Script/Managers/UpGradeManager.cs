@@ -32,7 +32,7 @@ public class UpGradeManager : Singleton<UpGradeManager>
 
     public List<BaseData> allDatas = new List<BaseData>();
 
-    private void Start()
+    private void Awake()
     {
         ActiveUpGradeBoard();
         SetDictionaryDatas();
