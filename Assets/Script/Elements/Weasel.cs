@@ -42,13 +42,18 @@ public class Weasel : MonoBehaviour
 
     private void Start()
     {
-        SetWeasel();
+        UpGradeWeasel();
     }
     private void OnEnable()
     {
+        SetWeasel();
+    }
+    
+    private void SetWeasel()
+    {
         //족제비 아이콘설정
-        //weaselIcon.sprite = data.weaselImage;
-        //weaselName.text = $"{data.name}";
+        weaselIcon.sprite = data.weaselImage;
+        weaselName.text = $"{data.name}";
     }
 
     private void Update()
@@ -58,15 +63,15 @@ public class Weasel : MonoBehaviour
 
     private void Texts()
     {
-        //costTxt.text = $"{data.cost}";
-        //levelTxt.text = $"{data.level}";
-        //perSecondIncrementTxt.text = $"{data.statIncrement.perSecondProduct}";
+        costTxt.text = $"{data.cost}";
+        levelTxt.text = $"{data.level}";
+        perSecondIncrementTxt.text = $"{data.statIncrement.perSecondProduct}";
     }
 
     /// <summary>
     /// 족제비 Set
     /// </summary>
-    private void SetWeasel()
+    private void UpGradeWeasel()
     {
         upGradeBtn.onClick.AddListener(() =>
         {
@@ -75,9 +80,9 @@ public class Weasel : MonoBehaviour
                 data.level += 1;
                 GameManager.Inst.Coin -= data.cost;
                 data.isBought = true;
-
             }
         });
+        
     }
 
 }

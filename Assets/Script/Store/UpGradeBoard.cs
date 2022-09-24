@@ -143,9 +143,5 @@ public class UpGradeBoard : MonoBehaviour
     private void Set(EDessertType dessertType)
     {
         SetActiveBoard(EBoardType.Store);
-
     }
-
-    
-
 }

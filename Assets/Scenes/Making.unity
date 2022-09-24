@@ -433,6 +433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpGradeBoard
       objectReference: {fileID: 0}
+    - target: {fileID: 8435258394413626988, guid: cca3ed45992a8e1408d952ed703c3d21, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8435258394413626989, guid: cca3ed45992a8e1408d952ed703c3d21, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
