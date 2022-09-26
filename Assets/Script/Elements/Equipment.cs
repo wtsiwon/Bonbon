@@ -31,6 +31,14 @@ public class Equipment : MonoBehaviour
     [SerializeField]
     [Tooltip("Sprite를 적용할 ImageComponent")]
     private Image equipmentIcon;
+
+    [SerializeField]
+    [Tooltip("잠금이미지 Component")]
+    private Image lockImg;
+
+    [SerializeField]
+    [Tooltip("잠금이미지 Sprite")]
+    private Sprite lockSprite;
     #endregion
 
     [SerializeField]
@@ -63,7 +71,7 @@ public class Equipment : MonoBehaviour
             isBought = value;
             if (isBought == true)
             {
-
+                
             }
 
         }
@@ -71,24 +79,30 @@ public class Equipment : MonoBehaviour
 
     private void Update()
     {
-        #region Texts
-        #endregion
+        ApplyImage();
     }
 
     private void OnEnable()
     {
+        #region 데이터 불러오기
         Data = (EquipmentData)UpGradeManager.Instance.datas[EBoardType.Equipment]
         [(int)UpGradeManager.Instance.CurrentBoardType];
-        Texts();
+        #endregion
+        ApplyTexts();
     }
 
-    private void Texts()
+    private void ApplyTexts()
     {
         name.text = $"{data.name}";
         costTxt.text = $"{data.cost}원";
         incrementClickTxt.text = $"{data.stat.perClickProduct}/c";
         incrementSecondTxt.text = $"{data.stat.perSecondProduct}/s";
+    }
+
+    private void ApplyImage()
+    {
         equipmentIcon.sprite = data.equipmentSprite;
+        lockImg.sprite = lockSprite;
     }
     private void Start()
     {
