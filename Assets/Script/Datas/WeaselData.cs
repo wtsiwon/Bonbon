@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeaselData", menuName = "Datas/WeaselData", order = 2)]
 public class WeaselData : BaseData
 {
+    #region Stat
     [Header("Stat")]
     [Tooltip("½ºÅÈ")]
     public Stat stat;
@@ -16,16 +17,11 @@ public class WeaselData : BaseData
     [Space(20f)]
     [Tooltip("Type")]
     public EDessertType dessertType;
-    [Tooltip("level")]
-    public int level;
-    [Tooltip("Cost")]
-    public int cost;
-    [Tooltip("ÀÌ¸§")]
-    public string name;
     [Tooltip("»ñ´Â°¡")]
     public bool isBought;
     [Tooltip("Á·Á¦ºñ Image")]
-    public Sprite weaselImage;
+    public Sprite weaselImage; 
+    #endregion
 }
 
 //public class CakeWeaselData : WeaselData
