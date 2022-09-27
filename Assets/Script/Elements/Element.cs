@@ -44,6 +44,7 @@ public class Element : MonoBehaviour
 
     protected virtual void Update()
     {
+        
     }
 
     protected virtual void OnEnable()
