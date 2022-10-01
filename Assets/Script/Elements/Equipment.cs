@@ -73,7 +73,6 @@ public class Equipment : MonoBehaviour
             {
                 
             }
-
         }
     }
 
@@ -85,8 +84,7 @@ public class Equipment : MonoBehaviour
     private void OnEnable()
     {
         #region 데이터 불러오기
-        Data = (EquipmentData)UpGradeManager.Instance.datas[EBoardType.Equipment]
-        [(int)UpGradeManager.Instance.CurrentBoardType];
+        
         #endregion
         ApplyTexts();
     }
