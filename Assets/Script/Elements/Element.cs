@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Element : MonoBehaviour
+public abstract class Element : MonoBehaviour
+//요소들의 부모
 {
     [SerializeField]
     [Tooltip("이름")]
